@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bslwv18vvfyn8"]
+[gd_scene load_steps=4 format=3 uid="uid://bslwv18vvfyn8"]
 
 [ext_resource type="Theme" uid="uid://bnhngmri4tfgr" path="res://theme/kenneyUI-green.tres" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://b77yfq0juriqb" path="res://scenes/menu.gd" id="1_mae5d"]
 [ext_resource type="Texture2D" uid="uid://xkoi31cotn2m" path="res://assets/game_background.jpg" id="1_ouk20"]
-[ext_resource type="AudioStream" uid="uid://bfmwgenmjuitp" path="res://addons/kenney_interface_sounds/click_001.wav" id="4_4hy44"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -61,7 +60,6 @@ text = "QUIT
 "
 
 [node name="ButtonSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_4hy44")
 
 [connection signal="pressed" from="Buttons/8-Way" to="." method="_on_8way_pressed"]
 [connection signal="pressed" from="Buttons/Mouse" to="." method="_on_mouse_pressed"]
