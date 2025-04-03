@@ -1,23 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://dutvt2gclrhut"]
 
-[ext_resource type="PackedScene" uid="uid://j2rcbd70thjl" path="res://scenes/basic_level.tscn" id="1_tnsdj"]
-[ext_resource type="Texture2D" uid="uid://cy3n857tersn3" path="res://assets/mage.png" id="2_tnsdj"]
+[ext_resource type="PackedScene" uid="uid://j2rcbd70thjl" path="res://scenes/basic_level.tscn" id="1_darti"]
+[ext_resource type="Texture2D" uid="uid://cy3n857tersn3" path="res://assets/mage.png" id="2_3nvxx"]
 
 [sub_resource type="GDScript" id="GDScript_84a3u"]
 script/source = "extends CharacterBody2D
 
-@export var speed = 4000
+@export var speed = 200
 
 func _physics_process(delta):
 	var input_direction = Input.get_vector(\"ui_left\", \"ui_right\", \"ui_up\", \"ui_down\")
-	velocity = input_direction * speed * delta
+	velocity = input_direction * speed
 	move_and_slide()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_41u45"]
-radius = 24.0
+radius = 43.0465
 
-[node name="BasicLevel" instance=ExtResource("1_tnsdj")]
+[node name="BasicLevel" instance=ExtResource("1_darti")]
 
 [node name="Character" type="CharacterBody2D" parent="." index="0"]
 position = Vector2(160, 256)
@@ -25,7 +25,8 @@ motion_mode = 1
 script = SubResource("GDScript_84a3u")
 
 [node name="Sprite" type="Sprite2D" parent="Character" index="0"]
-texture = ExtResource("2_tnsdj")
+scale = Vector2(1.78572, 1.78572)
+texture = ExtResource("2_3nvxx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character" index="1"]
 shape = SubResource("CircleShape2D_41u45")

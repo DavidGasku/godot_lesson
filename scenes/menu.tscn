@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://bnhngmri4tfgr" path="res://theme/kenneyUI-green.tres" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://b77yfq0juriqb" path="res://scenes/menu.gd" id="1_mae5d"]
 [ext_resource type="Texture2D" uid="uid://xkoi31cotn2m" path="res://assets/game_background.jpg" id="1_ouk20"]
-[ext_resource type="AudioStream" uid="uid://bfmwgenmjuitp" path="res://addons/kenney_interface_sounds/click_001.wav" id="4_4hy44"]
+[ext_resource type="AudioStream" uid="uid://cdthsnkek7v8b" path="res://addons/kenney_interface_sounds/click_001.wav" id="4_4hy44"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -43,13 +43,17 @@ grow_vertical = 2
 theme = ExtResource("1_lti8b")
 theme_override_constants/separation = 28
 
-[node name="Ball1" type="Button" parent="Buttons"]
+[node name="8-Way" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "Ball 1"
+text = "8-Way"
 
-[node name="Ball2" type="Button" parent="Buttons"]
+[node name="Mouse" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "Ball 2"
+text = "Mouse"
+
+[node name="Car" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Car"
 
 [node name="Quit" type="Button" parent="Buttons"]
 layout_mode = 2
@@ -59,8 +63,8 @@ text = "QUIT
 [node name="ButtonSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4hy44")
 
-[connection signal="pressed" from="Buttons/Ball1" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Buttons/Ball2" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Buttons/Ball2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Buttons/8-Way" to="." method="_on_8way_pressed"]
+[connection signal="pressed" from="Buttons/Mouse" to="." method="_on_mouse_pressed"]
+[connection signal="pressed" from="Buttons/Car" to="." method="_on_car_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
