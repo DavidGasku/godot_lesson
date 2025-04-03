@@ -10,16 +10,11 @@ config_version=5
 
 [application]
 
-config/name="juego"
+config/name="godot lesson"
 run/main_scene="uid://bslwv18vvfyn8"
 config/features=PackedStringArray("4.4", "Forward Plus")
 run/max_fps=60
-config/icon="res://icon.svg"
-
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
+config/icon="uid://cy3n857tersn3"
 
 [input]
 
