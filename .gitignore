@@ -10,3 +10,4 @@ export_credentials.cfg
 *.translation
 
 addons/
+export/
