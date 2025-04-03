@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbsu7drb6ky1i"]
+[gd_scene load_steps=8 format=3 uid="uid://dbsu7drb6ky1i"]
 
 [ext_resource type="Script" uid="uid://dyy2vivks10gx" path="res://scenes/tres_en_raya/tres_en_raya.gd" id="1_tsdwb"]
 [ext_resource type="Texture2D" uid="uid://0jwaulsxw648" path="res://assets/tic_toe.png" id="2_6lbtd"]
 [ext_resource type="Texture2D" uid="uid://dtjsqkx5nu40f" path="res://assets/o.png" id="3_7co18"]
 [ext_resource type="Texture2D" uid="uid://dp713dggdpwc3" path="res://assets/x.png" id="4_1pff7"]
+[ext_resource type="AudioStream" uid="uid://dt86n2kov8hru" path="res://assets/sounds/drop_003.wav" id="5_qic0j"]
+[ext_resource type="AudioStream" uid="uid://bpxlw32yw84x" path="res://assets/sounds/confirmation_003.wav" id="6_0b5ql"]
+[ext_resource type="AudioStream" uid="uid://bbw278qslk53j" path="res://assets/sounds/question_001.wav" id="7_u2x2e"]
 
 [node name="Tablero" type="TextureRect"]
 anchors_preset = 15
@@ -41,46 +44,50 @@ theme_override_constants/v_separation = 20
 columns = 3
 
 [node name="Button0" type="TextureButton" parent="GridContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(158, 158)
 layout_mode = 2
-texture_normal = ExtResource("3_7co18")
 
 [node name="Button1" type="TextureButton" parent="GridContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(158, 158)
 layout_mode = 2
-texture_normal = ExtResource("3_7co18")
 
 [node name="Button2" type="TextureButton" parent="GridContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(158, 158)
 layout_mode = 2
-texture_normal = ExtResource("3_7co18")
 
 [node name="Button3" type="TextureButton" parent="GridContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(158, 158)
 layout_mode = 2
-texture_normal = ExtResource("3_7co18")
 
 [node name="Button4" type="TextureButton" parent="GridContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(158, 158)
 layout_mode = 2
-texture_normal = ExtResource("3_7co18")
 
 [node name="Button5" type="TextureButton" parent="GridContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(158, 158)
 layout_mode = 2
-texture_normal = ExtResource("3_7co18")
 
 [node name="Button6" type="TextureButton" parent="GridContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(158, 158)
 layout_mode = 2
-texture_normal = ExtResource("3_7co18")
 
 [node name="Button7" type="TextureButton" parent="GridContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(158, 158)
 layout_mode = 2
-texture_normal = ExtResource("3_7co18")
 
 [node name="Button8" type="TextureButton" parent="GridContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(158, 158)
 layout_mode = 2
-texture_normal = ExtResource("3_7co18")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Drop" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_qic0j")
+volume_db = -6.0
+pitch_scale = 0.6
+
+[node name="Win" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("6_0b5ql")
+
+[node name="Lose" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("7_u2x2e")
