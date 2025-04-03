@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://brh25l5s6tsp7"]
+
+[ext_resource type="PackedScene" uid="uid://j2rcbd70thjl" path="res://scenes/basic_level.tscn" id="1_hynrs"]
+[ext_resource type="Texture2D" uid="uid://4e67k5tccow0" path="res://assets/ball.svg" id="2_iboi4"]
+
+[sub_resource type="GDScript" id="GDScript_84a3u"]
+script/source = "extends CharacterBody2D
+
+@export var speed = 400
+
+
+func _physics_process(delta):
+	look_at(get_global_mouse_position())
+	velocity = transform.x * Input.get_axis(\"down\", \"up\") * speed
+	move_and_slide()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_41u45"]
+radius = 24.0
+
+[node name="BasicLevel" instance=ExtResource("1_hynrs")]
+
+[node name="Character" type="CharacterBody2D" parent="." index="0"]
+position = Vector2(160, 256)
+script = SubResource("GDScript_84a3u")
+
+[node name="Sprite" type="Sprite2D" parent="Character" index="0"]
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("2_iboi4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character" index="1"]
+shape = SubResource("CircleShape2D_41u45")
