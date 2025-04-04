@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dbsu7drb6ky1i"]
 
 [ext_resource type="Script" uid="uid://dyy2vivks10gx" path="res://scenes/tres_en_raya/tres_en_raya.gd" id="1_tsdwb"]
-[ext_resource type="Texture2D" uid="uid://0jwaulsxw648" path="res://assets/tic_toe.png" id="2_6lbtd"]
-[ext_resource type="Texture2D" uid="uid://dtjsqkx5nu40f" path="res://assets/o.png" id="3_7co18"]
-[ext_resource type="Texture2D" uid="uid://dp713dggdpwc3" path="res://assets/x.png" id="4_1pff7"]
+[ext_resource type="Texture2D" uid="uid://0jwaulsxw648" path="res://assets/tic_toe/tic_toe.png" id="2_6lbtd"]
+[ext_resource type="Texture2D" uid="uid://dtjsqkx5nu40f" path="res://assets/tic_toe/o.png" id="3_7co18"]
+[ext_resource type="Texture2D" uid="uid://dp713dggdpwc3" path="res://assets/tic_toe/x.png" id="4_1pff7"]
 [ext_resource type="AudioStream" uid="uid://dt86n2kov8hru" path="res://assets/sounds/drop_003.wav" id="5_qic0j"]
 [ext_resource type="AudioStream" uid="uid://bpxlw32yw84x" path="res://assets/sounds/confirmation_003.wav" id="6_0b5ql"]
 [ext_resource type="AudioStream" uid="uid://bbw278qslk53j" path="res://assets/sounds/question_001.wav" id="7_u2x2e"]

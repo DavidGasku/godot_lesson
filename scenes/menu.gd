@@ -18,6 +18,16 @@ func _on_car_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/movements/car_movement.tscn")
 
 
+func _on_platformer_pressed() -> void:
+	button_sound.play()
+	get_tree().change_scene_to_file("res://scenes/movements/platformer.tscn")
+
+
+func _on_platformer_v_2_pressed() -> void:
+	button_sound.play()
+	get_tree().change_scene_to_file("res://scenes/movements/platformer_v2.tscn")
+
+
 func _on_quit_pressed() -> void:
 	button_sound.play()
 	get_tree().quit()

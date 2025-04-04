@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp713dggdpwc3"
-path="res://.godot/imported/x.png-c2761cde5044068192e9f310196875f2.ctex"
+uid="uid://0jwaulsxw648"
+path="res://.godot/imported/tic_toe.png-662b6989d3499c22b3151546f949257c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/x.png"
-dest_files=["res://.godot/imported/x.png-c2761cde5044068192e9f310196875f2.ctex"]
+source_file="res://assets/tic_toe/tic_toe.png"
+dest_files=["res://.godot/imported/tic_toe.png-662b6989d3499c22b3151546f949257c.ctex"]
 
 [params]
 

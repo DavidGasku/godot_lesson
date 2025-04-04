@@ -1,48 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://j2rcbd70thjl"]
+[gd_scene load_steps=2 format=3 uid="uid://j2rcbd70thjl"]
 
-[ext_resource type="Texture2D" uid="uid://4e67k5tccow0" path="res://assets/ball.svg" id="1_d1vh7"]
 [ext_resource type="PackedScene" uid="uid://bboonb4xo1hwi" path="res://scenes/back_button.tscn" id="3_wnke7"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_41u45"]
-radius = 24.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktgx5"]
-size = Vector2(286, 168)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d1vh7"]
-bounce = 0.75
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d1vh7"]
-
 [node name="BasicLevel" type="Node2D"]
-
-[node name="Ball" type="RigidBody2D" parent="."]
-position = Vector2(232, 112)
-mass = 0.1
-
-[node name="Ball" type="Sprite2D" parent="Ball"]
-scale = Vector2(0.37, 0.37)
-texture = ExtResource("1_d1vh7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
-shape = SubResource("CircleShape2D_41u45")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(664, 328)
-shape = SubResource("RectangleShape2D_ktgx5")
-
-[node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(624, 552)
-physics_material_override = SubResource("PhysicsMaterial_d1vh7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-shape = SubResource("WorldBoundaryShape2D_d1vh7")
-
-[node name="Polygon2D" type="Polygon2D" parent="Floor"]
-position = Vector2(-270.993, 0)
-scale = Vector2(1.23179, 2.125)
-polygon = PackedVector2Array(-384, 0, 824, 0, 824, 64, -384, 64)
 
 [node name="UI" parent="." instance=ExtResource("3_wnke7")]

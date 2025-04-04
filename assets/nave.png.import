@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0jwaulsxw648"
-path="res://.godot/imported/tic_toe.png-d26db0e8cf2f2e00558149e82770b7a0.ctex"
+uid="uid://c6bp7l5uogwah"
+path="res://.godot/imported/nave.png-6fb1ae4721580bde706738b5cb59a8f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tic_toe.png"
-dest_files=["res://.godot/imported/tic_toe.png-d26db0e8cf2f2e00558149e82770b7a0.ctex"]
+source_file="res://assets/nave.png"
+dest_files=["res://.godot/imported/nave.png-6fb1ae4721580bde706738b5cb59a8f9.ctex"]
 
 [params]
 

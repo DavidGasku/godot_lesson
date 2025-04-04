@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://brh25l5s6tsp7"]
+[gd_scene load_steps=6 format=3 uid="uid://brh25l5s6tsp7"]
 
 [ext_resource type="PackedScene" uid="uid://j2rcbd70thjl" path="res://scenes/basic_level.tscn" id="1_hynrs"]
-[ext_resource type="Texture2D" uid="uid://cy3n857tersn3" path="res://assets/mage.png" id="2_iboi4"]
+[ext_resource type="Texture2D" uid="uid://c6bp7l5uogwah" path="res://assets/nave.png" id="2_iboi4"]
+[ext_resource type="Texture2D" uid="uid://c4s37cjx37deu" path="res://assets/space_bg.jpg" id="3_s2gew"]
 
 [sub_resource type="GDScript" id="GDScript_iboi4"]
 script/source = "extends CharacterBody2D
@@ -10,26 +11,36 @@ script/source = "extends CharacterBody2D
 
 func get_input():
 	look_at(get_global_mouse_position())
-	velocity = transform.x * Input.get_axis(\"down\", \"up\") * speed
+	velocity = transform.x * Input.get_axis(\"ui_down\", \"ui_up\") * speed
 
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
 "
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_41u45"]
-radius = 42.0119
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2gew"]
+radius = 65.0
+height = 162.0
 
-[node name="BasicLevel" instance=ExtResource("1_hynrs")]
+[node name="MouseMovement" instance=ExtResource("1_hynrs")]
 
-[node name="Character" type="CharacterBody2D" parent="." index="0"]
+[node name="SpaceBg" type="Sprite2D" parent="." index="0"]
+position = Vector2(583, 328)
+scale = Vector2(2.05637, 2.05637)
+texture = ExtResource("3_s2gew")
+
+[node name="Character" type="CharacterBody2D" parent="." index="1"]
 position = Vector2(160, 256)
+motion_mode = 1
 script = SubResource("GDScript_iboi4")
 
 [node name="Sprite" type="Sprite2D" parent="Character" index="0"]
 rotation = 1.5708
-scale = Vector2(1.625, 1.625)
+scale = Vector2(0.205, 0.205)
 texture = ExtResource("2_iboi4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character" index="1"]
-shape = SubResource("CircleShape2D_41u45")
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_s2gew")
+
+[editable path="UI"]
