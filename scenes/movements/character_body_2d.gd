@@ -22,7 +22,4 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	# Orientar sprite según la dirección
-	$Sprite.flip_h = direction < 0
-	
 	move_and_slide()

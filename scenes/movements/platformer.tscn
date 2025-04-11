@@ -1,12 +1,13 @@
-[gd_scene load_steps=26 format=3 uid="uid://ddmy6nfpvt6me"]
+[gd_scene load_steps=27 format=3 uid="uid://ddmy6nfpvt6me"]
 
 [ext_resource type="PackedScene" uid="uid://j2rcbd70thjl" path="res://scenes/basic_level.tscn" id="1_o2e1i"]
 [ext_resource type="Texture2D" uid="uid://xkoi31cotn2m" path="res://assets/game_background.jpg" id="2_bd2k1"]
 [ext_resource type="Script" uid="uid://oa7o0at70e2t" path="res://scenes/movements/character_body_2d.gd" id="2_c0o6h"]
 [ext_resource type="Texture2D" uid="uid://t3f6h20svp3p" path="res://assets/Ninja_P7.png" id="2_kb4ym"]
+[ext_resource type="Texture2D" uid="uid://ccefu3v6trgi0" path="res://assets/box.png" id="3_hwio6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0o6h"]
-size = Vector2(256, 128)
+size = Vector2(112, 115)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bd2k1"]
 bounce = 0.75
@@ -149,21 +150,50 @@ position = Vector2(592, 331)
 scale = Vector2(1.67702, 1.67702)
 texture = ExtResource("2_bd2k1")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
-position = Vector2(776, 570)
+[node name="Box" type="StaticBody2D" parent="." index="1"]
+position = Vector2(920, 568)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
-position = Vector2(0, -64)
+[node name="Box" type="Sprite2D" parent="Box" index="0"]
+position = Vector2(-2, -66)
+scale = Vector2(0.168945, 0.168945)
+texture = ExtResource("3_hwio6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box" index="1"]
+position = Vector2(-3, -62.5)
 shape = SubResource("RectangleShape2D_c0o6h")
 
-[node name="Floor" type="StaticBody2D" parent="." index="2"]
+[node name="Box2" type="StaticBody2D" parent="." index="2"]
+position = Vector2(920, 448)
+
+[node name="Box" type="Sprite2D" parent="Box2" index="0"]
+position = Vector2(-2, -66)
+scale = Vector2(0.168945, 0.168945)
+texture = ExtResource("3_hwio6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box2" index="1"]
+position = Vector2(-3, -62.5)
+shape = SubResource("RectangleShape2D_c0o6h")
+
+[node name="Box3" type="StaticBody2D" parent="." index="3"]
+position = Vector2(776, 570)
+
+[node name="Box" type="Sprite2D" parent="Box3" index="0"]
+position = Vector2(-2, -66)
+scale = Vector2(0.168945, 0.168945)
+texture = ExtResource("3_hwio6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box3" index="1"]
+position = Vector2(-3, -62.5)
+shape = SubResource("RectangleShape2D_c0o6h")
+
+[node name="Floor" type="StaticBody2D" parent="." index="4"]
 position = Vector2(624, 570)
 physics_material_override = SubResource("PhysicsMaterial_bd2k1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" index="0"]
 shape = SubResource("WorldBoundaryShape2D_hwio6")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." index="3"]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." index="5"]
 position = Vector2(125, 470)
 script = ExtResource("2_c0o6h")
 

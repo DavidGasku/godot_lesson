@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=3 uid="uid://catm87kjrmb4a"]
+
+[ext_resource type="Texture2D" uid="uid://0jwaulsxw648" path="res://assets/tic_toe/tic_toe.png" id="1_pcmau"]
+[ext_resource type="Script" uid="uid://bgsvbwxs14rsp" path="res://scenes/tres_en_raya/tres_en_raya_v1.gd" id="2_ufgsa"]
+[ext_resource type="Texture2D" uid="uid://dp713dggdpwc3" path="res://assets/tic_toe/x.png" id="3_klu4k"]
+
+[node name="Tablero" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pcmau")
+expand_mode = 2
+stretch_mode = 5
+script = ExtResource("2_ufgsa")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0225179
+anchor_right = 0.995196
+anchor_bottom = 0.966223
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Buttons" type="GridContainer" parent="AspectRatioContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 3
+
+[node name="Button0" type="TextureButton" parent="AspectRatioContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_klu4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button1" type="TextureButton" parent="AspectRatioContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_klu4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button2" type="TextureButton" parent="AspectRatioContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_klu4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button3" type="TextureButton" parent="AspectRatioContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_klu4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button4" type="TextureButton" parent="AspectRatioContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_klu4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button5" type="TextureButton" parent="AspectRatioContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_klu4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button6" type="TextureButton" parent="AspectRatioContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_klu4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button7" type="TextureButton" parent="AspectRatioContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_klu4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button8" type="TextureButton" parent="AspectRatioContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_klu4k")
+ignore_texture_size = true
+stretch_mode = 0
