@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp713dggdpwc3"
-path="res://.godot/imported/x.png-fee00c8bf40baf397e794879709fccef.ctex"
+uid="uid://0jwaulsxw648"
+path="res://.godot/imported/tic_toe.png-c904f25c609f88fcc79a269c0518dac2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tic_toe/x.png"
-dest_files=["res://.godot/imported/x.png-fee00c8bf40baf397e794879709fccef.ctex"]
+source_file="res://scenes/tres_en_raya/assets/tic_toe.png"
+dest_files=["res://.godot/imported/tic_toe.png-c904f25c609f88fcc79a269c0518dac2.ctex"]
 
 [params]
 

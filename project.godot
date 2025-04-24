@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 run/max_fps=60
 config/icon="uid://cy3n857tersn3"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/scene_to_image/plugin.cfg")
+
 [input]
 
 ui_left={

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://catm87kjrmb4a"]
 
-[ext_resource type="Texture2D" uid="uid://0jwaulsxw648" path="res://assets/tic_toe/tic_toe.png" id="1_pcmau"]
+[ext_resource type="Texture2D" uid="uid://0jwaulsxw648" path="res://scenes/tres_en_raya/assets/tic_toe.png" id="1_pcmau"]
 [ext_resource type="Script" uid="uid://bgsvbwxs14rsp" path="res://scenes/tres_en_raya/tres_en_raya_v1.gd" id="2_ufgsa"]
-[ext_resource type="Texture2D" uid="uid://dp713dggdpwc3" path="res://assets/tic_toe/x.png" id="3_klu4k"]
+[ext_resource type="Texture2D" uid="uid://dp713dggdpwc3" path="res://scenes/tres_en_raya/assets/x.png" id="3_klu4k"]
 
 [node name="Tablero" type="TextureRect"]
 anchors_preset = 15

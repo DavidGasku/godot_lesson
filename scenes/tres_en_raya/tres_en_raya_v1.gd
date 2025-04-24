@@ -1,7 +1,7 @@
 extends Control
 
-const o_texture = preload("res://assets/tic_toe/o.png")
-const x_texture = preload("res://assets/tic_toe/x.png")
+const o_texture = preload("res://scenes/tres_en_raya/assets/o.png")
+const x_texture = preload("res://scenes/tres_en_raya/assets/x.png")
 
 var current_player: String = "X"
 var board: Array[String] = []
