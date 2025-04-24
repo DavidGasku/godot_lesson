@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bngv0wcdkngh4"
-path="res://.godot/imported/panel.png-7c00f7cbfb51102324c3b05428c172b6.ctex"
+path="res://.godot/imported/panel.png-98abd75f17820992d19abbe4c1e458c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/tres_en_raya/assets/panel.png"
-dest_files=["res://.godot/imported/panel.png-7c00f7cbfb51102324c3b05428c172b6.ctex"]
+source_file="res://assets/panel.png"
+dest_files=["res://.godot/imported/panel.png-98abd75f17820992d19abbe4c1e458c7.ctex"]
 
 [params]
 

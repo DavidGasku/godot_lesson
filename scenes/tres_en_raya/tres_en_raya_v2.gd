@@ -1,7 +1,7 @@
 extends Control
 
-const o_texture = preload("res://scenes/tres_en_raya/assets/o.png")
-const x_texture = preload("res://scenes/tres_en_raya/assets/x.png")
+const o_texture = preload("res://assets/o.png")
+const x_texture = preload("res://assets/x.png")
 
 var current_player: String = "X"
 var board: Array[String] = []
@@ -36,12 +36,9 @@ func _on_button_pressed(index: int) -> void:
 	$Sounds/Drop.play()
 
 	if _check_winner(current_player):
-		_disable_all_buttons()
-		$Sounds/Win.play()
-		await get_tree().create_timer(1).timeout
-		_show_winner_panel(current_player)
-		await get_tree().create_timer(3).timeout
-		get_tree().reload_current_scene()
+		_end_game(current_player)
+	elif _check_full_board():
+		_end_game("Tie")
 	else:
 		current_player = "O" if current_player == "X" else "X"
 
@@ -58,6 +55,27 @@ func _check_winner(player: String) -> bool:
 			fade_pieces(positions)
 			return true
 	return false
+
+
+func _check_full_board() -> bool:
+	return board.all(func(cell): return cell != "")
+
+
+# end game (X, O, Tie)
+func _end_game(result: String):
+	_disable_all_buttons()
+	await get_tree().create_timer(1).timeout
+	
+	if result == "Tie":
+		$Sounds/Lose.play()
+		_show_tie_panel()
+	else:
+		$Sounds/Win.play()
+		_show_winner_panel(current_player)
+	
+	await get_tree().create_timer(3).timeout
+	get_tree().reload_current_scene()
+
 
 
 # atenúa las piezas no ganadoras
@@ -77,4 +95,7 @@ func _show_winner_panel(winner: String):
 	var winner_tex = o_texture if winner == "O" else x_texture
 	$WinPanel/HBox/WinnerTex.texture = winner_tex
 	$WinPanel.show()
-	
+
+
+func _show_tie_panel():
+	$TiePanel.show()

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpxlw32yw84x"
-path="res://.godot/imported/confirmation_003.wav-abee2914a97e008ddbf5c0ff9c992d11.sample"
+path="res://.godot/imported/confirmation_003.wav-24a0e347040c668e5015f5b886107cb1.sample"
 
 [deps]
 
-source_file="res://scenes/tres_en_raya/assets/sounds/confirmation_003.wav"
-dest_files=["res://.godot/imported/confirmation_003.wav-abee2914a97e008ddbf5c0ff9c992d11.sample"]
+source_file="res://assets/sounds/confirmation_003.wav"
+dest_files=["res://.godot/imported/confirmation_003.wav-24a0e347040c668e5015f5b886107cb1.sample"]
 
 [params]
 

@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://dbsu7drb6ky1i"]
 
-[ext_resource type="Texture2D" uid="uid://0jwaulsxw648" path="res://scenes/tres_en_raya/assets/tic_toe.png" id="2_6lbtd"]
-[ext_resource type="Texture2D" uid="uid://dp713dggdpwc3" path="res://scenes/tres_en_raya/assets/x.png" id="4_1pff7"]
-[ext_resource type="AudioStream" uid="uid://dt86n2kov8hru" path="res://scenes/tres_en_raya/assets/sounds/drop_003.wav" id="5_qic0j"]
-[ext_resource type="AudioStream" uid="uid://bpxlw32yw84x" path="res://scenes/tres_en_raya/assets/sounds/confirmation_003.wav" id="6_0b5ql"]
-[ext_resource type="Texture2D" uid="uid://bngv0wcdkngh4" path="res://scenes/tres_en_raya/assets/panel.png" id="7_0b5ql"]
-[ext_resource type="AudioStream" uid="uid://bbw278qslk53j" path="res://scenes/tres_en_raya/assets/sounds/question_001.wav" id="7_u2x2e"]
-[ext_resource type="Texture2D" uid="uid://dtjsqkx5nu40f" path="res://scenes/tres_en_raya/assets/o.png" id="8_u2x2e"]
+[ext_resource type="Texture2D" uid="uid://0jwaulsxw648" path="res://assets/tic_toe.png" id="2_6lbtd"]
+[ext_resource type="Script" uid="uid://dyy2vivks10gx" path="res://tres_en_raya_v2.gd" id="2_8rjty"]
+[ext_resource type="AudioStream" uid="uid://dt86n2kov8hru" path="res://assets/sounds/drop_003.wav" id="5_qic0j"]
+[ext_resource type="AudioStream" uid="uid://bpxlw32yw84x" path="res://assets/sounds/confirmation_003.wav" id="6_0b5ql"]
+[ext_resource type="Texture2D" uid="uid://bngv0wcdkngh4" path="res://assets/panel.png" id="7_0b5ql"]
+[ext_resource type="AudioStream" uid="uid://bbw278qslk53j" path="res://assets/sounds/question_001.wav" id="7_u2x2e"]
+[ext_resource type="Texture2D" uid="uid://dtjsqkx5nu40f" path="res://assets/o.png" id="8_u2x2e"]
 
 [node name="Tablero" type="TextureRect"]
 anchors_preset = 15
@@ -17,6 +17,7 @@ grow_vertical = 2
 texture = ExtResource("2_6lbtd")
 expand_mode = 2
 stretch_mode = 5
+script = ExtResource("2_8rjty")
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
 layout_mode = 1
@@ -37,7 +38,6 @@ columns = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_1pff7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -45,7 +45,6 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_1pff7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -53,7 +52,6 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_1pff7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -61,7 +59,6 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_1pff7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -69,7 +66,6 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_1pff7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -77,7 +73,6 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_1pff7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -85,7 +80,6 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_1pff7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -93,7 +87,6 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_1pff7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -101,7 +94,6 @@ stretch_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_1pff7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -157,3 +149,41 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.246428, 0.114197, 0.0318049, 1)
 theme_override_font_sizes/font_size = 138
 text = "wins!"
+
+[node name="TiePanel" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 105.0
+offset_top = 75.0
+offset_right = -105.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0b5ql")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBox" type="HBoxContainer" parent="TiePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -297.5
+offset_top = -94.5
+offset_right = 297.5
+offset_bottom = 94.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 26
+
+[node name="Label" type="Label" parent="TiePanel/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.246428, 0.114197, 0.0318049, 1)
+theme_override_font_sizes/font_size = 138
+text = "It's a tie !"
+horizontal_alignment = 1

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cdthsnkek7v8b"
-path="res://.godot/imported/click_001.wav-444ac9d3890b5d0e66181905f275d01b.sample"
+path="res://.godot/imported/click_001.wav-150ae3e2955a3822a2214166747f61a6.sample"
 
 [deps]
 
-source_file="res://scenes/tres_en_raya/assets/sounds/click_001.wav"
-dest_files=["res://.godot/imported/click_001.wav-444ac9d3890b5d0e66181905f275d01b.sample"]
+source_file="res://assets/sounds/click_001.wav"
+dest_files=["res://.godot/imported/click_001.wav-150ae3e2955a3822a2214166747f61a6.sample"]
 
 [params]
 

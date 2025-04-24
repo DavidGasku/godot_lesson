@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bbw278qslk53j"
-path="res://.godot/imported/question_001.wav-55be68405d3bcb8b1759d1c4bf7060c2.sample"
+path="res://.godot/imported/question_001.wav-2232ecec89eb5f97b2c621fb57b407e3.sample"
 
 [deps]
 
-source_file="res://scenes/tres_en_raya/assets/sounds/question_001.wav"
-dest_files=["res://.godot/imported/question_001.wav-55be68405d3bcb8b1759d1c4bf7060c2.sample"]
+source_file="res://assets/sounds/question_001.wav"
+dest_files=["res://.godot/imported/question_001.wav-2232ecec89eb5f97b2c621fb57b407e3.sample"]
 
 [params]
 

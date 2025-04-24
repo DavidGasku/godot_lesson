@@ -1,7 +1,7 @@
 extends Control
 
-const o_texture = preload("res://scenes/tres_en_raya/assets/o.png")
-const x_texture = preload("res://scenes/tres_en_raya/assets/x.png")
+const o_texture = preload("res://assets/o.png")
+const x_texture = preload("res://assets/x.png")
 
 var current_player: String = "X"
 var board: Array[String] = []
@@ -19,12 +19,13 @@ func _ready() -> void:
 
 
 # Se llama por cada botón pulsado
-# recibe el índice del botón
+# recibe el índice del botón (0-8)
 func _on_button_pressed(index: int) -> void:
 	if board[index] != "":
 		return
 
 	var button := buttons.get_child(index)
+	
 	if current_player == "X":
 		button.texture_normal = x_texture
 		board[index] = "X"
@@ -40,8 +41,11 @@ func _on_button_pressed(index: int) -> void:
 		current_player = "O" if current_player == "X" else "X"
 
 
-# comprueba si existe alguna de las posibles combinaciones ganadoras
+
 func _check_winner(player: String) -> bool:
+# comprueba si existe alguna de las posibles combinaciones ganadoras
+# pej: _check_winner("X")
+
 	var win_positions: Array = [
 		[0, 1, 2], [3, 4, 5], [6, 7, 8], # filas
 		[0, 3, 6], [1, 4, 7], [2, 5, 8], # columnas
@@ -54,8 +58,8 @@ func _check_winner(player: String) -> bool:
 	return false
 
 
-# atenúa las piezas no ganadoras
 func fade_pieces(winning_positions: Array):
+# atenúa las piezas no ganadoras
 	for i in board.size():
 		if not i in winning_positions:
 			var button = buttons.get_child(i)

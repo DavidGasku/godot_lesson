@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4cxklw7mecdl"
-path="res://.godot/imported/layout.svg-37a2354878d2007d878ee6173fb2a079.ctex"
+path="res://.godot/imported/layout.svg-2feb43136972e21cd03c3512f8757142.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/tres_en_raya/assets/layout.svg"
-dest_files=["res://.godot/imported/layout.svg-37a2354878d2007d878ee6173fb2a079.ctex"]
+source_file="res://assets/layout.svg"
+dest_files=["res://.godot/imported/layout.svg-2feb43136972e21cd03c3512f8757142.ctex"]
 
 [params]
 
