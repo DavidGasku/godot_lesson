@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="Tres en raya"
-run/main_scene="uid://catm87kjrmb4a"
+run/main_scene="uid://dbsu7drb6ky1i"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"

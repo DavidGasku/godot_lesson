@@ -10,13 +10,22 @@ var board: Array[String] = []
 
 
 func _ready() -> void:
+	reset_game()
+	for i in board.size():
+		var button := buttons.get_child(i)
+		button.pressed.connect(_on_button_pressed.bind(i))
+
+
+func reset_game() -> void:
+	$TiePanel.hide()
+	$WinPanel.hide()
 	board.resize(9)
-	
+	_disable_all_buttons(false)
 	for i in board.size():
 		board[i] = ""
 		var button := buttons.get_child(i)
 		button.texture_normal = null
-		button.pressed.connect(_on_button_pressed.bind(i))
+		button.modulate.a = 1.0
 
 
 # Se llama por cada botón pulsado
@@ -63,7 +72,7 @@ func _check_full_board() -> bool:
 
 # end game (X, O, Tie)
 func _end_game(result: String):
-	_disable_all_buttons()
+	_disable_all_buttons(true)
 	await get_tree().create_timer(1).timeout
 	
 	if result == "Tie":
@@ -74,7 +83,7 @@ func _end_game(result: String):
 		_show_winner_panel(current_player)
 	
 	await get_tree().create_timer(3).timeout
-	get_tree().reload_current_scene()
+	reset_game()
 
 
 
@@ -86,16 +95,18 @@ func fade_pieces(winning_positions: Array):
 			create_tween().tween_property(button, "modulate:a", 0.2, 0.5)
 
 
-func _disable_all_buttons() -> void:
-	for i in board.size():
-		buttons.get_child(i).disabled = true
+func _disable_all_buttons(enable: bool) -> void:
+	for button in buttons.get_children():
+		button.disabled = enable
 
 
 func _show_winner_panel(winner: String):
 	var winner_tex = o_texture if winner == "O" else x_texture
 	$WinPanel/HBox/WinnerTex.texture = winner_tex
 	$WinPanel.show()
+	create_tween().tween_property($WinPanel, "modulate:a", 1.0, 0.3).from(0.0)
 
 
 func _show_tie_panel():
 	$TiePanel.show()
+	create_tween().tween_property($TiePanel, "modulate:a", 1.0, 0.3).from(0.0)
